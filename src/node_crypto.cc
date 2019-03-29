@@ -2220,8 +2220,8 @@ void SSLWrap<Base>::GetEphemeralKeyInfo(
             .FromJust();
         break;
       case EVP_PKEY_EC:
-      // TODO(shigeki) Add EVP_PKEY_X448.
       case EVP_PKEY_X25519:
+      case EVP_PKEY_X448:
         {
           const char* curve_name;
           if (kid == EVP_PKEY_EC) {
